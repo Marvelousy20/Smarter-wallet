@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} max-w-md mx-auto overflow-hidden`}>
+        {children}
+      </body>
     </html>
   );
 }
