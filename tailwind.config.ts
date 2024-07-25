@@ -1,12 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -18,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        "violet-purple": "#819DF5",
+      },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -34,7 +39,20 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-gradient-fade": {
+          "background-image":
+            "linear-gradient(to bottom, white, rgb(150, 150, 150))",
+          color: "transparent",
+          "background-clip": "text",
+          "-webkit-background-clip": "text",
+        },
+      });
+    }),
+  ],
+} satisfies Config;
 
-export default config
+export default config;
