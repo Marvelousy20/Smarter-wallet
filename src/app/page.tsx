@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex flex-col pt-[4.762rem] relative">
+    <main className="flex flex-col pt-[4.762rem] relative ">
       <div className="absolute top-0 w-full left-0">
         <Image src="/auth/w1.png" alt="W1" width={1000} height={1000} />
       </div>
@@ -20,7 +19,7 @@ export default function Home() {
         </p>
 
         <p className="font-[300] leading-6 text-white  mb-[2.938rem] max-w-[16rem]">
-          Directly get what you want via countless third-party account{" "}
+          Directly get what you want via countless third-party account {" "}
           <span className="text-gradient-fade">applications!</span>
         </p>
         <div className="flex justify-between items-center">
@@ -54,12 +53,12 @@ export default function Home() {
         </div>
 
         <div className="space-y-5 mt-12">
-          <Button className="bg-white h-12 w-full rounded-[80px] text-black text-sm font-semibold">
+          <Button className="bg-white h-12 w-full rounded-[80px] text-black text-sm font-semibold hover:text-white">
             Login
           </Button>
           <Button
             variant={"register"}
-            className="rounded-[80px] text-sm font-semibold"
+            className="rounded-[80px] text-sm font-semibold "
           >
             Register
           </Button>
