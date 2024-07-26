@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex flex-col pt-[4.762rem]">
+    <main className="flex flex-col pt-[4.762rem] relative">
       <div className="absolute top-0 w-full left-0">
         <Image src="/auth/w1.png" alt="W1" width={1000} height={1000} />
       </div>
