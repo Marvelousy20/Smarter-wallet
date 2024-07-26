@@ -1,11 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <main className="flex flex-col pt-[4.762rem] relative ">
-      <div className="absolute top-0 w-full left-0">
+    <main className="flex flex-col pt-[4.762rem] relative min-h-screen">
+      {/* <div className="absolute top-0 w-full left-0">
         <Image src="/auth/w1.png" alt="W1" width={1000} height={1000} />
+      </div> */}
+
+      <div className="absolute top-0 left-0 right-0 w-full h-full">
+        <img src="/auth/w1.png" alt="W1" className="h-full w-full bg-cover" />
       </div>
 
       <div className="flex flex-row text-white px-6 relative z-10 space-x-2">
@@ -53,12 +63,14 @@ export default function Home() {
         </div>
 
         <div className="space-y-5 mt-12">
-          <Button className="bg-white h-12 w-full rounded-[80px] text-black text-sm font-semibold hover:text-white">
+          <Button className="bg-white h-12 w-full rounded-[80px] text-black text-sm font-semibold hover:text-white"
+          onClick={() => router.push("/login")}>
             Login
           </Button>
           <Button
             variant={"register"}
-            className="rounded-[80px] text-sm font-semibold "
+            className="rounded-[80px] text-sm font-semibold"
+            onClick={() => router.push("/register")}
           >
             Register
           </Button>
