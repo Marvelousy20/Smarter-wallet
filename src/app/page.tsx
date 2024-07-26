@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="flex flex-col pt-[4.762rem] relative">
       <div className="absolute top-0 w-full left-0">
@@ -60,6 +65,7 @@ export default function Home() {
           <Button
             variant={"register"}
             className="rounded-[80px] text-sm font-semibold"
+            onClick={() => router.push("/register")}
           >
             Register
           </Button>
