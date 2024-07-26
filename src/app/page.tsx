@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Image from "next/image";
@@ -15,7 +16,7 @@ export default function Home() {
       </div> */}
 
       <div className="absolute top-0 left-0 right-0 w-full h-full">
-        <img src="/auth/w1.png" alt="W2" className="h-full" />
+        <img src="/auth/w1.png" alt="W1" className="h-full w-full bg-cover" />
       </div>
 
       <div className="flex flex-row text-white px-6 relative z-10 space-x-2">

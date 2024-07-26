@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Image from "next/image";
@@ -21,7 +22,7 @@ const Register = () => {
         />
       </div> */}
       <div className="absolute top-0 left-0 right-0 w-full h-full">
-        <img src="/auth/w2.png" alt="W2" className="h-full" />
+        <img src="/auth/w2.png" alt="W2" className="h-full w-full bg-cover" />
       </div>
 
       <div className="relative px-8 ">
