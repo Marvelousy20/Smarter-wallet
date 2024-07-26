@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import FloatingInput from "@/components/FloatingLabelInput";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const Register = () => {
+  const router = useRouter();
   return (
     <div className="text-white relative pt-11 min-h-screen">
       {/* <div className="absolute top-0 left-0 w-full">
@@ -22,7 +26,7 @@ const Register = () => {
 
       <div className="relative px-8 ">
         <div className="flex justify-between py-6">
-          <MdOutlineArrowBackIos size={24} />
+          <MdOutlineArrowBackIos size={24} onClick={() => router.back()} />
 
           <h1 className="text-sm font-semibold">Sign Up</h1>
 

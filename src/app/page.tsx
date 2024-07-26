@@ -9,9 +9,13 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="flex flex-col pt-[4.762rem] relative">
-      <div className="absolute top-0 w-full left-0">
+    <main className="flex flex-col pt-[4.762rem] relative min-h-screen">
+      {/* <div className="absolute top-0 w-full left-0">
         <Image src="/auth/w1.png" alt="W1" width={1000} height={1000} />
+      </div> */}
+
+      <div className="absolute top-0 left-0 right-0 w-full h-full">
+        <img src="/auth/w1.png" alt="W2" className="h-full" />
       </div>
 
       <div className="flex flex-row text-white px-6 relative z-10 space-x-2">
