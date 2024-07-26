@@ -28,7 +28,7 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
       <input
         id={id}
         className={clsx(
-          "peer h-16 px-4 w-full bg-transparent border border-[#819DF54D] text-gray-900 placeholder-transparent focus:outline-none focus:border-[#622B2B] rounded-[16px]",
+          "peer h-16 px-4 w-full bg-transparent border border-[#819DF54D] text-[white] placeholder-transparent focus:outline-none focus:border-[#622B2B] rounded-[16px]",
           inputClassName
         )}
         placeholder={label}
@@ -41,7 +41,7 @@ const FloatingInput: React.FC<FloatingInputProps> = ({
       <label
         htmlFor={id}
         className={`absolute left-4 text-gray-600 text-sm transition-all duration-300
-                    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2
+                    peer-placeholder-shown:text-base peer-placeholder-shown:text-[#819DF5] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2
                     peer-focus:top-2 peer-focus:text-xs peer-focus:text-blue-600
                     ${
                       isFocused || value
