@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-
 import Image from "next/image";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import FloatingInput from "@/components/FloatingLabelInput";
@@ -26,15 +25,11 @@ const Login = () => {
           <Image src="/logoo.svg" alt="logo" width={24} height={24} />
         </div>
 
-
         <div className="space-y-6 mt-10">
           <FloatingInput label="Email address" type="email" />
           {/* should be a div that accept the email inputted as props*/}
           <FloatingInput label="Reset Password" type="password" />
-          <FloatingInput label="Reenter password" type="email" />
-
-
-
+          <FloatingInput label="Re-enter password" type="password" />
         </div>
 
         <div className="mt-[13.0rem]">
@@ -48,7 +43,6 @@ const Login = () => {
         </Button>
       </div>
     </div>
-
   );
 };
 

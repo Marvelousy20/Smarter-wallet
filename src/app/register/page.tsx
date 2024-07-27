@@ -62,7 +62,11 @@ const Register = () => {
           </p>
         </div>
 
-        <Button variant={"register"} className="mt-4 rounded-[80px] ">
+        <Button
+          variant={"register"}
+          className="mt-4 rounded-[80px]"
+          onClick={() => router.push("/success")}
+        >
           Register
         </Button>
       </div>
