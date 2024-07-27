@@ -22,7 +22,9 @@ const config = {
       colors: {
         "violet-purple": "#819DF5",
       },
-
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -49,6 +51,14 @@ const config = {
           color: "transparent",
           "background-clip": "text",
           "-webkit-background-clip": "text",
+        },
+
+        ".welcome-gradient": {
+          "background-image":
+            "linear-gradient(91.26deg, #FFFFFF 0%, #70A2FF 100%);",
+          color: "transparent",
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
         },
       });
     }),
